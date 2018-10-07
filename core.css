@@ -1,0 +1,232 @@
+:root {
+	--main-font: 'Roboto', sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #2c3e50;
+}
+
+.bg-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: darkgray;
+	overflow: hidden;
+}
+
+.bg-container img {
+	display: none;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	filter: brightness(70%);
+	object-fit: cover;
+}
+
+.bg-container img.active {
+	opacity: 1;
+	display: block;
+}
+
+.content-container {
+	position: fixed;
+	width: 90%;
+	height: 85%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 10;
+	background: rgba(0, 0, 0, .2);
+}
+
+.content {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	text-align: center;	
+	font-family: var(--main-font);
+	font-weight: 500;
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.logo span {
+	margin-left: 15px;
+}
+
+.timer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;	
+	font-family: var(--main-font);
+	font-weight: 300;
+}
+
+.timer div span {
+	font-size: 52px;
+}
+
+.timer div p {
+	font-size: 14px;
+}
+
+.timer div {
+	margin-left: 20%;
+}
+
+.timer div:first-child {
+	margin-left: 0;
+}
+
+.promise {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	transform: translateX(-50%);
+	text-align: center;	
+	font-family: var(--main-font);
+	font-weight: 500;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+/* ============================================================= */
+
+@media only screen and (max-width : 991px) and (orientation: portrait) {
+	.content-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	.promise {
+		width: 100%;
+	}
+
+	.logo {
+		width: 100%;
+		top: 5%;
+		font-size: 25px;
+	}
+
+	.logo span {
+		margin-left: 0;
+	}
+
+	.promise {
+		font-size: 16px;
+	}
+	
+}
+
+@media only screen and (max-width : 768px) and (orientation: portrait) {
+	.logo {
+		font-size: 20px;
+	}
+
+	.promise {
+		font-size: 11px;
+	}
+
+	.timer div span {
+		font-size: 32px;
+	}
+
+	.timer div {
+		margin-left: 10%;
+	}
+	
+}
+
+@media only screen and (max-width : 480px) and (orientation: portrait) {
+	.logo {
+		font-size: 16px;
+	}
+
+	.promise {
+		font-size: 9px;
+	}
+
+	.timer div span {
+		font-size: 26px;
+	}
+	
+}
+
+@media only screen and (max-width : 991px) and (orientation: landscape) {
+  .content-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	.promise {
+		width: 100%;
+	}
+
+	.logo {
+		width: 100%;
+		top: 5%;
+		font-size: 25px;
+	}
+
+	.logo span {
+		margin-left: 0;
+	}
+
+	.promise {
+		font-size: 16px;
+	}
+
+}
+
+@media only screen and (max-width : 768px) and (orientation: landscape) {
+	.logo {
+		font-size: 20px;
+	}
+
+	.promise {
+		font-size: 11px;
+	}
+
+	.timer div span {
+		font-size: 42px;
+	}
+  
+}
